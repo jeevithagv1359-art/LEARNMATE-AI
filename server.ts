@@ -180,12 +180,12 @@ app.post('/api/chat', async (req: Request, res: Response) => {
 
     res.json({
       reply: responseText,
-      model: 'gemini',
+      model: 'cloud-ai',
     });
   } catch (error: any) {
-    console.error('Error generating educational content with Gemini:', error);
+    console.error('Error generating educational content:', error);
     res.status(500).json({
-      error: error?.message || 'Failed to generate learning response from Google Gemini.',
+      error: error?.message || 'Failed to generate learning response from AI.',
     });
   }
 });
@@ -215,7 +215,7 @@ Output MUST be strict JSON in this exact structure:
     "Key takeaway point 3"
   ]
 }`
-      : `You are EduGenie's Cloud Gemini Concept Simplifier.
+      : `You are EduGenie's Cloud AI Concept Simplifier.
 Provide an intuitive, clear, beginner-friendly breakdown of the concept.
 Output MUST be strict JSON in this exact structure:
 {
@@ -260,7 +260,7 @@ Output MUST be strict JSON in this exact structure:
       explanation: parsed.explanation || 'Explanation generated successfully.',
       simpleAnalogy: parsed.simpleAnalogy || 'Think of it as a helpful everyday comparison.',
       keyTakeaways: Array.isArray(parsed.keyTakeaways) ? parsed.keyTakeaways : [],
-      modelUsed: isLightweight ? 'LaMini-Flan-T5 (Lightweight)' : 'Gemini 3.8 Flash (Cloud)',
+      modelUsed: isLightweight ? 'LaMini-Flan-T5 (Lightweight)' : 'Cloud Generative AI',
       createdAt: Date.now(),
     });
   } catch (error: any) {
@@ -623,8 +623,8 @@ app.get('/api/models', (_req: Request, res: Response) => {
         deviceCompatibility: 'Runs efficiently on low-resource environments and Apple Silicon (Mac M1/M2/M3)',
       },
       {
-        id: 'gemini',
-        name: 'Google Gemini 3.8 Flash (Cloud Generative AI)',
+        id: 'cloud',
+        name: 'Cloud Generative AI Engine',
         role: 'Advanced multi-turn reasoning, automatic quiz generation, text summarization & curriculum paths',
         latency: 'High-speed cloud inference',
         deviceCompatibility: 'Cloud API',
@@ -646,7 +646,6 @@ app.get('/api/health', (_req: Request, res: Response) => {
   res.json({
     status: 'online',
     assistant: 'EduGenie',
-    model: 'gemini-3.8-flash',
     hasKey: Boolean(process.env.GEMINI_API_KEY),
   });
 });

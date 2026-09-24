@@ -104,7 +104,7 @@ export default function App() {
     handleUpdateSession(newSession);
     setCurrentTab('assistant');
 
-    // Make the initial call to Google Gemini API
+    // Make the initial call to API
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -125,9 +125,9 @@ export default function App() {
 
       const data = await response.json();
       const assistantMsg: ChatMessage = {
-        id: `msg-gemini-${Date.now()}`,
+        id: `msg-ai-${Date.now()}`,
         role: 'assistant',
-        content: data.reply || 'No response returned from Gemini.',
+        content: data.reply || 'No response returned from assistant.',
         timestamp: Date.now(),
         level,
         subject,
@@ -142,7 +142,7 @@ export default function App() {
 
       handleUpdateSession(completedSession);
     } catch (err: any) {
-      console.error('Initial question Gemini error:', err);
+      console.error('Initial question request error:', err);
       const errorMsg: ChatMessage = {
         id: `msg-err-${Date.now()}`,
         role: 'assistant',

@@ -75,7 +75,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             Welcome back, Scholar!
           </h1>
           <p className="text-sm sm:text-base text-indigo-100 font-normal leading-relaxed">
-            What academic topic or concept would you like to master today? Ask any question to get an intuitive explanation, real-world examples, and key terms powered by Google Gemini.
+            What academic topic or concept would you like to master today? Ask any question to get an intuitive explanation, real-world examples, and key terms powered by AI.
           </p>
         </div>
       </div>

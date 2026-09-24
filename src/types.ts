@@ -89,7 +89,7 @@ export interface SimplifiedConceptData {
   explanation: string;
   simpleAnalogy: string;
   keyTakeaways: string[];
-  modelUsed: 'LaMini-Flan-T5 (Lightweight)' | 'Gemini 3.8 Flash (Cloud)';
+  modelUsed: 'LaMini-Flan-T5 (Lightweight)' | 'Cloud Generative AI';
   createdAt: number;
 }
 

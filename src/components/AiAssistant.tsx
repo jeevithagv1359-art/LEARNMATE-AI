@@ -82,7 +82,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
     setIsLoading(true);
 
     try {
-      // Send conversation history, topic, subject and level to Google Gemini API
+      // Send conversation history, topic, subject and level to backend API
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
@@ -120,7 +120,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
         messages: [...newMessages, assistantMessage],
       });
     } catch (err: any) {
-      console.error('Gemini request error:', err);
+      console.error('Chat request error:', err);
       setErrorMessage("Sorry, EduGenie couldn't generate a response right now. Please try again.");
     } finally {
       setIsLoading(false);
@@ -225,7 +225,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
                 What would you like to learn today?
               </h2>
               <p className="text-xs sm:text-sm text-slate-600">
-                Enter any academic question or syllabus concept. EduGenie provides student-friendly explanations, key takeaways, and real-world examples powered by Google Gemini.
+                Enter any academic question or syllabus concept. EduGenie provides student-friendly explanations, key takeaways, and real-world examples powered by AI.
               </p>
             </div>
 
@@ -375,7 +375,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
         </form>
 
         <div className="flex items-center justify-between text-[11px] text-slate-500 px-2 pt-1.5">
-          <span>EduGenie uses Google Gemini Generative AI</span>
+          <span>EduGenie AI Interactive Learning Assistant</span>
           <span className="hidden sm:inline">Press Shift + Enter for newline</span>
         </div>
       </div>

@@ -25,13 +25,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartLearning, onNavigat
   const capabilities = [
     {
       title: 'AI-Powered Question Answering',
-      desc: 'Provides concise and intelligent answers to academic and general knowledge questions using Google Gemini generative AI with step-by-step clarity.',
+      desc: 'Provides concise and intelligent answers to academic and general knowledge questions using Generative AI with step-by-step clarity.',
       icon: Sparkles,
       color: 'bg-indigo-50 text-indigo-700',
     },
     {
       title: 'Simplified Concept Explanation',
-      desc: 'Converts complex concepts into simple, beginner-friendly explanations with relatable real-world analogies using lightweight LaMini-Flan-T5 model persona.',
+      desc: 'Converts complex concepts into simple, beginner-friendly explanations with relatable real-world analogies using lightweight model personas.',
       icon: Brain,
       color: 'bg-violet-50 text-violet-700',
     },
@@ -55,7 +55,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartLearning, onNavigat
     },
     {
       title: 'Multi-Model AI Architecture',
-      desc: 'Combines local/lightweight AI inference for instant concept explanations with cloud-based Gemini AI for complex reasoning and multi-turn tutoring.',
+      desc: 'Combines local/lightweight AI inference for instant concept explanations with high-capacity Cloud AI for complex reasoning and multi-turn tutoring.',
       icon: Cpu,
       color: 'bg-amber-50 text-amber-700',
     },
@@ -63,7 +63,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartLearning, onNavigat
 
   const modularApis = [
     { method: 'POST', path: '/api/chat', purpose: 'Multi-turn academic Q&A with learning levels' },
-    { method: 'POST', path: '/api/explain', purpose: 'Concept simplification with LaMini / Gemini engine toggle' },
+    { method: 'POST', path: '/api/explain', purpose: 'Concept simplification with Lightweight / Cloud AI toggle' },
     { method: 'POST', path: '/api/quiz', purpose: 'Automatic generation of 3 MCQs with 4 options each & grading' },
     { method: 'POST', path: '/api/summarize', purpose: 'Educational text compression and core takeaway extraction' },
     { method: 'POST', path: '/api/learning-path', purpose: 'Curriculum roadmap from beginner to advanced' },
@@ -86,7 +86,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartLearning, onNavigat
 
         {/* Exact Description */}
         <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-          EduGenie is a Google Gemini-powered learning assistant designed to support students in understanding academic topics through Generative AI and interactive learning.
+          EduGenie is an AI-powered learning assistant designed to support students in understanding academic topics through Generative AI and interactive learning.
         </p>
       </div>
 
@@ -115,7 +115,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartLearning, onNavigat
             Multi-Model AI Architecture
           </h3>
           <p className="text-slate-600 text-sm mt-1 max-w-2xl">
-            Combines lightweight AI inference for rapid concept simplification with cloud-based Gemini AI for multi-turn academic synthesis.
+            Combines lightweight AI inference for rapid concept simplification with high-capacity Cloud AI for multi-turn academic synthesis.
           </p>
         </div>
 
@@ -145,7 +145,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartLearning, onNavigat
               <div className="flex items-center gap-2.5">
                 <Sparkles className="w-6 h-6 text-violet-600" />
                 <h4 className="text-lg font-bold text-slate-900">
-                  Cloud Gemini 3.8 Flash
+                  High-Capacity Cloud AI
                 </h4>
               </div>
               <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-violet-100 text-violet-700">

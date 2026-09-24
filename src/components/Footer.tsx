@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
             <div className="text-left">
               <div className="text-sm font-bold text-slate-900 font-display">EduGenie</div>
-              <div className="text-[11px] text-slate-500">Google Gemini Powered Learning Assistant</div>
+              <div className="text-[11px] text-slate-500">AI-Powered Learning Assistant</div>
             </div>
           </div>
 
@@ -74,8 +74,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-3 text-center sm:text-left">
-          <p>© {new Date().getFullYear()} EduGenie. Built for interactive academic learning with Google Gemini & Multi-Model AI.</p>
-          <p>Multi-Model AI Architecture · Lightweight Local + Cloud Gemini</p>
+          <p>© {new Date().getFullYear()} EduGenie. Built for interactive academic learning with Generative AI & Multi-Model Intelligence.</p>
+          <p>Multi-Model AI Architecture · Lightweight Local + High-Capacity Cloud AI</p>
         </div>
       </div>
     </footer>

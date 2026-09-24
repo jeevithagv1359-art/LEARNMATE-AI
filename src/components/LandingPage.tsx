@@ -96,7 +96,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
     {
       id: 'assistant' as NavigationTab,
       title: 'AI Question Answering',
-      tag: 'Google Gemini',
+      tag: 'Generative AI Tutor',
       description: 'Concise and intelligent answers to academic and general knowledge questions with step-by-step guidance.',
       icon: Sparkles,
       color: 'bg-indigo-50 text-indigo-700 border-indigo-200',
@@ -105,7 +105,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
     {
       id: 'explain' as NavigationTab,
       title: 'Simplified Concept Explanation',
-      tag: 'LaMini-Flan-T5 & Gemini',
+      tag: 'Multi-Model Intelligence',
       description: 'Converts complex academic theories into crystal-clear beginner explanations with vivid everyday analogies.',
       icon: Lightbulb,
       color: 'bg-violet-50 text-violet-700 border-violet-200',
@@ -149,7 +149,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             {/* Subtitle Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-semibold text-indigo-700">
               <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-              <span>Google Gemini Powered Learning Assistant</span>
+              <span>AI-Powered Learning Assistant</span>
             </div>
 
             {/* Exact Required Heading */}
@@ -162,7 +162,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
             {/* Exact Required Description */}
             <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl font-normal">
-              An AI-powered learning assistant that helps students understand academic topics through interactive learning with Google Gemini.
+              An AI-powered learning assistant that helps students understand academic topics through interactive learning with Generative AI.
             </p>
 
             {/* Hero CTA Buttons */}
@@ -423,7 +423,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             The Interactive Learning Flow
           </h3>
           <p className="mt-2 text-slate-600 text-sm">
-            Student asks a question → EduGenie sends the request to Gemini → Gemini generates an educational response → Student continues learning through follow-up questions.
+            Student asks a question → EduGenie analyzes the request → AI generates an educational response → Student continues learning through follow-up questions.
           </p>
         </div>
 
@@ -442,9 +442,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 font-bold font-display">
               2
             </div>
-            <h4 className="text-base font-bold text-slate-900">Structured Gemini Response</h4>
+            <h4 className="text-base font-bold text-slate-900">Structured AI Response</h4>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Gemini breaks down the concept into an intuitive Explanation, Important Points, Real-World Example, and Key Terms.
+              EduGenie breaks down the concept into an intuitive Explanation, Important Points, Real-World Example, and Key Terms.
             </p>
           </div>
 
@@ -465,7 +465,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         <div className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 text-white rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-xl">
           <div className="relative z-10 max-w-2xl mx-auto space-y-5">
             <h3 className="text-2xl sm:text-4xl font-extrabold font-display tracking-tight text-balance">
-              Start learning with Google Gemini today
+              Start learning with EduGenie today
             </h3>
             <p className="text-indigo-200 text-sm sm:text-base">
               Personalized explanations, instant follow-up answers, 3-MCQ quizzes, smart summarization, and clear educational roadmaps designed for students.

@@ -12,7 +12,7 @@ export const ConceptSimplifier: React.FC<ConceptSimplifierProps> = ({
   onExploreInChat,
 }) => {
   const [conceptInput, setConceptInput] = useState('');
-  const [selectedModel, setSelectedModel] = useState<'lamini' | 'gemini'>('lamini');
+  const [selectedModel, setSelectedModel] = useState<'lamini' | 'cloud'>('lamini');
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<SimplifiedConceptData | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -167,12 +167,12 @@ ${result.keyTakeaways.map((t) => `- ${t}`).join('\n')}`;
             </div>
           </button>
 
-          {/* Cloud Option: Gemini 3.8 Flash */}
+          {/* Cloud Option: Cloud Generative AI */}
           <button
             type="button"
-            onClick={() => setSelectedModel('gemini')}
+            onClick={() => setSelectedModel('cloud')}
             className={`p-4 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
-              selectedModel === 'gemini'
+              selectedModel === 'cloud'
                 ? 'border-violet-600 bg-violet-50/60 ring-2 ring-violet-500/20'
                 : 'border-slate-200 bg-slate-50 hover:bg-white hover:border-slate-300'
             }`}
@@ -181,7 +181,7 @@ ${result.keyTakeaways.map((t) => `- ${t}`).join('\n')}`;
               <div className="flex items-center justify-between mb-1">
                 <span className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
                   <Sparkles className="w-4 h-4 text-violet-600" />
-                  Gemini 3.8 Flash
+                  Cloud Generative AI
                 </span>
                 <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-violet-100 text-violet-700">
                   Cloud Generative AI
